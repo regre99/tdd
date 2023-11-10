@@ -29,3 +29,19 @@ describe('Single input', () => {
         expect(greet(" Alice ")).toBe("Hello Alice.");
     })
 })
+
+describe('Multiple input', () => {
+    test('Input with at least 3 names', () => {
+        expect(greet("Alice, Bob, Jerry")).toBe("Hello Alice, Bob and Jerry.");
+    })
+    test('Input with 2 names', () => {
+        expect(greet("Alice, Bob, Jerry")).toBe("Hello Alice, Bob and Jerry.");
+    })
+    test('Input with many names', () => {
+        expect(greet("Alice, Bob, Jerry, Tom, Lily, Joe")).toBe("Hello Alice, Bob, Jerry, Tom, Lily and Joe.");
+    })
+    test('Unnecessary spaces', () => {
+        expect(greet("Alice ,  Bob ,  Jerry")).toBe("Hello Alice, Bob and Jerry.");
+    })
+
+})
