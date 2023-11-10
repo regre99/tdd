@@ -1,3 +1,3 @@
-export const greet = () => {
-    return "Hi!";
+export const greet = (names: string[] = []) => {
+    if (names.length ===  0) return "Hello, my friend."
 }
