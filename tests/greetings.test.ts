@@ -14,3 +14,9 @@ describe('No input', () => {
         expect(greet([])).toBe("Hello, my friend.");
     })
 })
+
+describe('Single input', () => {
+    test('Normal input', () => {
+        expect(greet("Alice")).toBe("Hello Alice.");
+    })
+})
